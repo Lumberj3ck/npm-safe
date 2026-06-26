@@ -1,0 +1,13 @@
+{
+  "name": "shai-hulud-sim",
+  "version": "1.0.0",
+  "description": "Harmless npm lifecycle simulation for defensive detector training.",
+  "private": true,
+  "scripts": {
+    "postinstall": "node -e \"require('./postinstall.js')\""
+  },
+  "files": [
+    "package.json",
+    "postinstall.js"
+  ]
+}
