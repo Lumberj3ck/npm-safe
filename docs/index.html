@@ -28,7 +28,6 @@
       <nav>
         <a href="#modes">Modes</a>
         <a href="#signals">Signals</a>
-        <a href="#demo">Demo</a>
         <a class="nav-cta" href="https://github.com/" aria-label="Open GitHub">Host on GitHub Pages</a>
       </nav>
     </header>
@@ -40,11 +39,11 @@
           <h1 id="hero-title">Watch npm install.</h1>
           <p class="hero-text">
             `daytona-npm-watch` runs package installs in Daytona, captures logs, traces, and file snapshots,
-            then emits a plain JSON report your team can read, demo, and extend.
+            then emits a plain JSON report your team can read and extend.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#demo">Run the demo</a>
-            <a class="button secondary" href="#architecture">See the flow</a>
+            <a class="button primary" href="#architecture">See the flow</a>
+            <a class="button secondary" href="#modes">Compare modes</a>
           </div>
         </div>
 
@@ -178,57 +177,6 @@ Uploading local tarball to sandbox: /tmp/daytona-npm-watch-input/shai-hulud-sim-
         </div>
       </section>
 
-      <section class="slide artifacts" aria-labelledby="artifacts-title">
-        <div>
-          <p class="slide-number">05 / evidence</p>
-          <h2 id="artifacts-title">Keep the sandbox, inspect the scene.</h2>
-          <p>
-            With `--keep-sandbox`, your demo becomes interactive. SSH into Daytona and open the exact files named
-            in the JSON report.
-          </p>
-        </div>
-        <div class="artifact-list">
-          <article><strong>npm.log</strong><span>Lifecycle output and npm debug noise</span></article>
-          <article><strong>npm.strace</strong><span>Process, file, and network syscalls when available</span></article>
-          <article><strong>files.before</strong><span>Filesystem baseline before install</span></article>
-          <article><strong>files.after</strong><span>Filesystem state after install</span></article>
-          <article><strong>project/</strong><span>The temporary npm project and node_modules tree</span></article>
-        </div>
-      </section>
-
-      <section id="demo" class="slide demo-script" aria-labelledby="demo-title">
-        <div class="section-heading">
-          <p class="slide-number">06 / live demo</p>
-          <h2 id="demo-title">Three commands for a clean presentation.</h2>
-        </div>
-        <div class="command-stack">
-          <button type="button" data-copy="npm pack ./examples/shai-hulud-sim --pack-destination .">
-            <span>1</span>
-            <code>npm pack ./examples/shai-hulud-sim --pack-destination .</code>
-          </button>
-          <button type="button" data-copy="npm run dev -- safe ./shai-hulud-sim-1.0.0.tgz">
-            <span>2</span>
-            <code>npm run dev -- safe ./shai-hulud-sim-1.0.0.tgz</code>
-          </button>
-          <button type="button" data-copy="npm run dev -- observe ./shai-hulud-sim-1.0.0.tgz --keep-sandbox --verbose">
-            <span>3</span>
-            <code>npm run dev -- observe ./shai-hulud-sim-1.0.0.tgz --keep-sandbox --verbose</code>
-          </button>
-        </div>
-        <p class="copy-hint" id="copy-hint" aria-live="polite">Click any command to copy it.</p>
-      </section>
-
-      <section class="slide limitation-slide" aria-labelledby="limitations-title">
-        <div class="warning-panel">
-          <p class="slide-number">07 / boundaries</p>
-          <h2 id="limitations-title">Built for defensive training.</h2>
-          <p>
-            The demo package is harmless. The detector is intentionally transparent and heuristic-based. It is not
-            a complete malware sandbox, but it clearly shows how install-time behavior can be isolated, captured,
-            and explained.
-          </p>
-        </div>
-      </section>
     </main>
 
     <footer>
