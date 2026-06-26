@@ -111,6 +111,24 @@ Run it through observe mode:
 npm run dev -- observe ./malvared-demo-1.0.0.tgz
 ```
 
+## Website Demo Presentation
+
+A static presentation site is included in `docs/`. It is dependency-free and ready for GitHub Pages.
+
+Preview locally by opening:
+
+```text
+docs/index.html
+```
+
+To host on GitHub Pages:
+
+- Push this repository to GitHub.
+- Open repository Settings.
+- Go to Pages.
+- Set the source to the `docs` folder on your main branch.
+- Save and wait for GitHub to publish the site.
+
 ## Harmless Shai-Hulud-Style Simulation
 
 `examples/shai-hulud-sim` is a local-only training package. Its `postinstall` script writes a marker file to `/tmp/daytona-npm-watch-shai-hulud-sim.txt`, uses a harmless shell print, and includes suspicious strings as inert text. It does not read credentials, contact the network, persist, evade tools, or publish anything.
