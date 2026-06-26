@@ -10,8 +10,8 @@
   --red: #ff4f3f;
   --amber: #ffba55;
   --shadow: rgba(0, 0, 0, 0.42);
-  --mono: "Azeret Mono", ui-monospace, monospace;
-  --display: "Fraunces", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --display: "IBM Plex Sans", system-ui, sans-serif;
 }
 
 * {
@@ -26,8 +26,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 12% 8%, rgba(202, 255, 90, 0.18), transparent 28rem),
-    radial-gradient(circle at 88% 18%, rgba(255, 79, 63, 0.16), transparent 24rem),
+    radial-gradient(circle at 12% 8%, rgba(202, 255, 90, 0.08), transparent 28rem),
+    radial-gradient(circle at 88% 18%, rgba(255, 79, 63, 0.08), transparent 24rem),
     linear-gradient(140deg, #060706 0%, #0b0f0c 48%, #151207 100%);
   color: var(--text);
   font-family: var(--mono);
@@ -43,7 +43,7 @@ body {
 }
 
 .grain {
-  opacity: 0.18;
+  opacity: 0.08;
   background-image:
     linear-gradient(115deg, transparent 0 48%, rgba(255,255,255,0.08) 49% 51%, transparent 52% 100%),
     radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
@@ -52,7 +52,7 @@ body {
 }
 
 .scanline {
-  opacity: 0.08;
+  opacity: 0.03;
   background: repeating-linear-gradient(to bottom, transparent 0 6px, #fff 7px, transparent 8px);
 }
 
@@ -172,26 +172,26 @@ p {
 h1,
 h2 {
   font-family: var(--display);
-  font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -0.08em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.055em;
 }
 
 h1 {
-  max-width: 8ch;
+  max-width: 12ch;
   margin-bottom: 1.5rem;
-  font-size: clamp(3.8rem, 10vw, 8.2rem);
+  font-size: clamp(3rem, 8vw, 6.6rem);
 }
 
 h2 {
-  max-width: 12ch;
+  max-width: 14ch;
   margin-bottom: 1.25rem;
-  font-size: clamp(3.3rem, 8vw, 7.5rem);
+  font-size: clamp(2.4rem, 5.4vw, 4.8rem);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
-  letter-spacing: -0.06em;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  letter-spacing: -0.04em;
 }
 
 .hero-text,
@@ -248,7 +248,6 @@ h3 {
 }
 
 .evidence-card {
-  transform: rotate(2deg);
   border-radius: 1.5rem;
   overflow: hidden;
 }
@@ -508,77 +507,6 @@ pre {
   color: var(--muted);
 }
 
-.hulud-slide {
-  display: grid;
-  grid-template-columns: 0.82fr 1fr;
-  align-items: center;
-  gap: 3rem;
-}
-
-.hulud-copy p:not(.slide-number) {
-  max-width: 42rem;
-  color: var(--muted);
-  font-size: clamp(1rem, 1.7vw, 1.22rem);
-  line-height: 1.7;
-}
-
-.hulud-panel {
-  position: relative;
-  min-height: 31rem;
-  display: grid;
-  align-content: end;
-  padding: clamp(1.2rem, 3vw, 2rem);
-  border: 1px solid rgba(255, 186, 85, 0.35);
-  border-radius: 2rem;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 54% 28%, rgba(255, 186, 85, 0.3), transparent 18rem),
-    linear-gradient(135deg, rgba(255, 79, 63, 0.2), rgba(202, 255, 90, 0.07)),
-    var(--panel-strong);
-  box-shadow: 0 30px 90px var(--shadow);
-}
-
-.worm {
-  position: absolute;
-  top: 14%;
-  left: 50%;
-  width: min(24rem, 62vw);
-  aspect-ratio: 1;
-  translate: -50% 0;
-  border-radius: 46% 54% 52% 48%;
-  border: 2px solid rgba(255, 186, 85, 0.46);
-  background:
-    repeating-radial-gradient(circle at 50% 50%, transparent 0 1.05rem, rgba(255, 186, 85, 0.2) 1.12rem 1.22rem),
-    radial-gradient(circle at 50% 50%, rgba(7, 8, 7, 0.95) 0 28%, rgba(255, 79, 63, 0.16) 29% 42%, transparent 43%);
-  box-shadow: inset 0 0 60px rgba(255, 79, 63, 0.26), 0 0 80px rgba(255, 186, 85, 0.16);
-  animation: breathe 5s ease-in-out infinite;
-}
-
-.hulud-panel ul {
-  position: relative;
-  display: grid;
-  gap: 0.8rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.hulud-panel li {
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--line);
-  background: rgba(7, 8, 7, 0.68);
-  color: var(--text);
-}
-
-@keyframes breathe {
-  0%, 100% {
-    transform: scale(1) rotate(0deg);
-  }
-  50% {
-    transform: scale(1.04) rotate(2deg);
-  }
-}
-
 .limitation-slide {
   display: grid;
   place-items: center;
@@ -615,7 +543,6 @@ footer {
   .hero,
   .problem-grid,
   .artifacts,
-  .hulud-slide,
   .mode-cards {
     grid-template-columns: 1fr;
   }
