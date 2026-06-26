@@ -74,8 +74,7 @@ a {
   backdrop-filter: blur(18px);
 }
 
-.brand,
-.deck-nav nav {
+.brand {
   display: flex;
   align-items: center;
   gap: 0.85rem;
@@ -95,24 +94,6 @@ a {
   background: var(--red);
   color: #210504;
   box-shadow: 0 0 28px rgba(255, 79, 63, 0.45);
-}
-
-.deck-nav nav a {
-  color: var(--muted);
-  font-size: 0.8rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.deck-nav nav a:hover {
-  color: var(--acid);
-}
-
-.nav-cta {
-  padding: 0.65rem 0.8rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
 }
 
 .slide {
@@ -498,10 +479,6 @@ footer {
     flex-direction: column;
   }
 
-  .deck-nav nav {
-    flex-wrap: wrap;
-  }
-
   .hero,
   .incident-slide,
   .problem-grid,
@@ -520,10 +497,6 @@ footer {
 }
 
 @media (max-width: 620px) {
-  .deck-nav nav a:not(.nav-cta) {
-    display: none;
-  }
-
   .slide {
     min-height: auto;
   }
