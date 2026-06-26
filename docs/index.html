@@ -74,25 +74,29 @@
       <section class="slide incident-slide" aria-labelledby="incident-title">
         <div>
           <p class="slide-number">02 / incident context</p>
-          <h2 id="incident-title">Why npm install behavior matters.</h2>
-          <p>
-            The Shai-Hulud npm supply-chain incident showed how package lifecycle scripts can turn dependency
-            installation into an execution path. Once trusted package access was compromised, malicious releases
-            could run during install and create a fast-moving blast radius.
-          </p>
+          <h2 id="incident-title">Shai-Hulud: what happened?</h2>
+          <p>npm packages became an execution path during install.</p>
         </div>
         <div class="incident-points">
           <article>
-            <strong>What was vulnerable</strong>
-            <span>Trusted maintainer/package publishing paths, install-time scripts, and exposed automation tokens.</span>
+            <strong>01</strong>
+            <span>Trusted package publishing was abused.</span>
           </article>
           <article>
-            <strong>How it ignited</strong>
-            <span>Compromised package versions executed during `npm install`, searched for secrets, and attempted propagation.</span>
+            <strong>02</strong>
+            <span>Malicious versions ran through lifecycle scripts.</span>
           </article>
           <article>
-            <strong>Why detection helps</strong>
-            <span>Signals like `postinstall`, shell execution, network calls, and token-file access are visible in sandbox artifacts.</span>
+            <strong>03</strong>
+            <span>Secrets and automation tokens were high-value targets.</span>
+          </article>
+          <article>
+            <strong>04</strong>
+            <span>Propagation could move fast across dependency chains.</span>
+          </article>
+          <article>
+            <strong>05</strong>
+            <span>Sandbox traces reveal install-time behavior.</span>
           </article>
         </div>
       </section>

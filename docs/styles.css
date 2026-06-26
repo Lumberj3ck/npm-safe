@@ -297,10 +297,10 @@ pre {
 }
 
 .incident-slide p:not(.slide-number) {
-  max-width: 45rem;
+  max-width: 34rem;
   color: var(--muted);
-  font-size: clamp(1rem, 1.7vw, 1.22rem);
-  line-height: 1.7;
+  font-size: clamp(1.05rem, 1.9vw, 1.35rem);
+  line-height: 1.5;
 }
 
 .incident-points {
@@ -310,19 +310,28 @@ pre {
 
 .incident-points article {
   display: grid;
-  gap: 0.45rem;
-  padding: 1.15rem;
+  grid-template-columns: 4.5rem 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
   border: 1px solid var(--line);
   background: rgba(16, 21, 16, 0.78);
 }
 
 .incident-points strong {
+  display: grid;
+  place-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  background: rgba(202, 255, 90, 0.1);
+  border: 1px solid var(--line);
   color: var(--acid);
 }
 
 .incident-points span {
-  color: var(--muted);
-  line-height: 1.55;
+  color: var(--text);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.35;
 }
 
 .statement-stack {
@@ -520,7 +529,8 @@ footer {
   }
 
   .flow,
-  .signals-grid {
+  .signals-grid,
+  .incident-points article {
     grid-template-columns: 1fr;
   }
 
