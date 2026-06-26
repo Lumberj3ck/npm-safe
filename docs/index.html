@@ -37,7 +37,7 @@
       <section class="hero slide" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow"><span></span> defensive npm malware-analysis training</p>
-          <h1 id="hero-title">Watch npm install scripts from inside a disposable sandbox.</h1>
+          <h1 id="hero-title">Watch npm install.</h1>
           <p class="hero-text">
             `daytona-npm-watch` runs package installs in Daytona, captures logs, traces, and file snapshots,
             then emits a plain JSON report your team can read, demo, and extend.
@@ -218,9 +218,29 @@ Uploading local tarball to sandbox: /tmp/daytona-npm-watch-input/shai-hulud-sim-
         <p class="copy-hint" id="copy-hint" aria-live="polite">Click any command to copy it.</p>
       </section>
 
+      <section class="slide hulud-slide" aria-labelledby="hulud-title">
+        <div class="hulud-copy">
+          <p class="slide-number">07 / training package</p>
+          <h2 id="hulud-title">Shai-Hulud style, safely simulated.</h2>
+          <p>
+            The demo includes `examples/shai-hulud-sim`, a harmless package that imitates suspicious npm
+            install-time signals without stealing secrets, contacting infrastructure, persisting, or publishing.
+          </p>
+        </div>
+        <div class="hulud-panel">
+          <div class="worm" aria-hidden="true"></div>
+          <ul>
+            <li>Runs a benign `postinstall` script</li>
+            <li>Writes one marker file under `/tmp`</li>
+            <li>Contains inert strings like `curl`, `base64`, and `child_process`</li>
+            <li>Creates safe signals for the JSON report</li>
+          </ul>
+        </div>
+      </section>
+
       <section class="slide limitation-slide" aria-labelledby="limitations-title">
         <div class="warning-panel">
-          <p class="slide-number">07 / boundaries</p>
+          <p class="slide-number">08 / boundaries</p>
           <h2 id="limitations-title">Built for defensive training.</h2>
           <p>
             The demo package is harmless. The detector is intentionally transparent and heuristic-based. It is not

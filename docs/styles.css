@@ -178,9 +178,9 @@ h2 {
 }
 
 h1 {
-  max-width: 11ch;
+  max-width: 8ch;
   margin-bottom: 1.5rem;
-  font-size: clamp(4rem, 12vw, 10.4rem);
+  font-size: clamp(3.8rem, 10vw, 8.2rem);
 }
 
 h2 {
@@ -508,6 +508,77 @@ pre {
   color: var(--muted);
 }
 
+.hulud-slide {
+  display: grid;
+  grid-template-columns: 0.82fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hulud-copy p:not(.slide-number) {
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.hulud-panel {
+  position: relative;
+  min-height: 31rem;
+  display: grid;
+  align-content: end;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 1px solid rgba(255, 186, 85, 0.35);
+  border-radius: 2rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 54% 28%, rgba(255, 186, 85, 0.3), transparent 18rem),
+    linear-gradient(135deg, rgba(255, 79, 63, 0.2), rgba(202, 255, 90, 0.07)),
+    var(--panel-strong);
+  box-shadow: 0 30px 90px var(--shadow);
+}
+
+.worm {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  width: min(24rem, 62vw);
+  aspect-ratio: 1;
+  translate: -50% 0;
+  border-radius: 46% 54% 52% 48%;
+  border: 2px solid rgba(255, 186, 85, 0.46);
+  background:
+    repeating-radial-gradient(circle at 50% 50%, transparent 0 1.05rem, rgba(255, 186, 85, 0.2) 1.12rem 1.22rem),
+    radial-gradient(circle at 50% 50%, rgba(7, 8, 7, 0.95) 0 28%, rgba(255, 79, 63, 0.16) 29% 42%, transparent 43%);
+  box-shadow: inset 0 0 60px rgba(255, 79, 63, 0.26), 0 0 80px rgba(255, 186, 85, 0.16);
+  animation: breathe 5s ease-in-out infinite;
+}
+
+.hulud-panel ul {
+  position: relative;
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hulud-panel li {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  background: rgba(7, 8, 7, 0.68);
+  color: var(--text);
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.04) rotate(2deg);
+  }
+}
+
 .limitation-slide {
   display: grid;
   place-items: center;
@@ -544,6 +615,7 @@ footer {
   .hero,
   .problem-grid,
   .artifacts,
+  .hulud-slide,
   .mode-cards {
     grid-template-columns: 1fr;
   }
