@@ -289,6 +289,42 @@ pre {
   gap: 3rem;
 }
 
+.incident-slide {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.incident-slide p:not(.slide-number) {
+  max-width: 45rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.incident-points {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.incident-points article {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  background: rgba(16, 21, 16, 0.78);
+}
+
+.incident-points strong {
+  color: var(--acid);
+}
+
+.incident-points span {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .statement-stack {
   display: grid;
   gap: 1rem;
@@ -458,6 +494,7 @@ footer {
   }
 
   .hero,
+  .incident-slide,
   .problem-grid,
   .mode-cards {
     grid-template-columns: 1fr;

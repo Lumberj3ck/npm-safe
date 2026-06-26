@@ -71,9 +71,35 @@
         </aside>
       </section>
 
+      <section class="slide incident-slide" aria-labelledby="incident-title">
+        <div>
+          <p class="slide-number">02 / incident context</p>
+          <h2 id="incident-title">Why npm install behavior matters.</h2>
+          <p>
+            The Shai-Hulud npm supply-chain incident showed how package lifecycle scripts can turn dependency
+            installation into an execution path. Once trusted package access was compromised, malicious releases
+            could run during install and create a fast-moving blast radius.
+          </p>
+        </div>
+        <div class="incident-points">
+          <article>
+            <strong>What was vulnerable</strong>
+            <span>Trusted maintainer/package publishing paths, install-time scripts, and exposed automation tokens.</span>
+          </article>
+          <article>
+            <strong>How it ignited</strong>
+            <span>Compromised package versions executed during `npm install`, searched for secrets, and attempted propagation.</span>
+          </article>
+          <article>
+            <strong>Why detection helps</strong>
+            <span>Signals like `postinstall`, shell execution, network calls, and token-file access are visible in sandbox artifacts.</span>
+          </article>
+        </div>
+      </section>
+
       <section class="slide problem-grid" aria-labelledby="problem-title">
         <div>
-          <p class="slide-number">01 / why</p>
+          <p class="slide-number">03 / why</p>
           <h2 id="problem-title">The install step is executable code.</h2>
         </div>
         <div class="statement-stack">
@@ -94,7 +120,7 @@
 
       <section id="architecture" class="slide flow-slide" aria-labelledby="flow-title">
         <div class="section-heading">
-          <p class="slide-number">02 / architecture</p>
+          <p class="slide-number">04 / architecture</p>
           <h2 id="flow-title">One command. One disposable lab.</h2>
         </div>
         <div class="flow">
@@ -127,7 +153,7 @@ Uploading local tarball to sandbox: /tmp/daytona-npm-watch-input/shai-hulud-sim-
 
       <section id="modes" class="slide modes" aria-labelledby="modes-title">
         <div class="section-heading">
-          <p class="slide-number">03 / modes</p>
+          <p class="slide-number">05 / modes</p>
           <h2 id="modes-title">Two ways to inspect the package.</h2>
         </div>
         <div class="mode-cards">
@@ -154,7 +180,7 @@ Uploading local tarball to sandbox: /tmp/daytona-npm-watch-input/shai-hulud-sim-
 
       <section id="signals" class="slide signal-wall" aria-labelledby="signals-title">
         <div class="section-heading narrow">
-          <p class="slide-number">04 / detection</p>
+          <p class="slide-number">06 / detection</p>
           <h2 id="signals-title">Explainable signals, not black-box scoring.</h2>
           <p>
             The prototype looks for behavior and strings that are useful in training demos. Each signal maps back
